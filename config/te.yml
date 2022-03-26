@@ -1,0 +1,35 @@
+TYPE: 'IA'
+Data:
+  img_dir: 'ABAW/aligned_images'
+  train_seq_file: 'ABAW/annotations/train_seq.csv'
+  val_seq_file: 'ABAW/annotations/val_seq.csv'
+  train_label_file: 'ABAW/annotations/train.csv'
+  val_label_file: 'ABAW/annotations/val.csv'
+  train_img_feat_list: ['ABAW/feat/ires100/', 'ABAW/feat/fau/']
+  val_img_feat_list: ['ABAW/feat/ires100/', 'ABAW/feat/fau/']
+  train_audio_feat_list: ['ABAW/feat/wav2vec', 'ABAW/feat/vggish', 'ABAW/feat/compare', 'ABAW/feat/agemaps']
+  val_audio_feat_list: ['ABAW/feat/wav2vec', 'ABAW/feat/vggish', 'ABAW/feat/compare', 'ABAW/feat/agemaps']
+  seq_len: 250
+  loader:
+    batch_size: 64
+    num_workers: 20
+    pin_memory: True
+
+Model:
+  model_name: FeatFuseEarly
+  bin_num: 1
+  img_dim: 1024
+  audio_dim: 1242
+
+Log:
+  log_file_path: "./log/logfile/"
+  log_file_name: "all_early.log"
+  checkpoint_path: "./log/checkpoint"
+
+Solver:
+  loss: ccc
+  epoch: 30
+  lr: 0.00003
+  weight_decay: 0.00001
+  optimizer: Adam
+  dropout: 0.3
