@@ -1,6 +1,6 @@
 #  Multi-modal Emotion Estimation for in-the-wild Videos
 
-This is a repository for our solution for the [ABAW 2022 Valence-Arousal Challenge](https://ibug.doc.ic.ac.uk/resources/cvpr-2022-3rd-abaw/), and you can also view the paper submission [here]().
+This is a repository for our solution for the [ABAW 2022 Valence-Arousal Challenge](https://ibug.doc.ic.ac.uk/resources/cvpr-2022-3rd-abaw/), and you can also view the paper submission [here](https://arxiv.org/abs/2203.13032).
 
 ## Requirements
 
